@@ -1,0 +1,59 @@
+.base {
+  background: darkslategray;
+  margin-top: 5vh;
+  border: 3px solid black;
+  width: 100%;
+}
+
+.expressions {
+  background: lightgrey;
+  padding: 5%;
+  font-size: 2em;
+  text-align: right;
+  overflow: auto;
+}
+
+.evalExpression {
+  border-bottom: 1px solid black;
+  font-size: 0.7em;
+  overflow: auto;
+}
+
+.keypad {
+  width: 100%;
+  align-self: center;
+}
+
+.table {
+  width: 100%;
+}
+
+.keys {
+  margin: 0;
+  background: white;
+  color: grey;
+  padding: 1em;
+  font-size: 2rem;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.keys:hover {
+  opacity: 1;
+}
+
+.optkey {
+  color: white;
+  background-color: black;
+}
+
+.evlkey {
+  color: white;
+  background-color: orange;
+}
+
+.numkey {
+  color: red;
+  background: black;
+}
