@@ -35,7 +35,15 @@ export class AppComponent {
     let lastKey = this.calc[this.calc.length - 1]
     if (lastKey === '/' || lastKey === '*' || lastKey === '+' || lastKey === '-' || lastKey === '.') return
     if (eval(this.eval) === this.calc) return
-    this.eval = this.calc
-    this.calc = eval(this.calc)
+    if (this.calc.includes('.')){
+      let _calc = this.calc.replace('+', 'm').replace('-', 'm').replace('/', 'm').replace('*', 'm').split('m')
+      for (var x of _calc){
+        if (x.indexOf('.') != x.lastIndexOf('.')) return
+      }
+    }
+    if (this.calc.includes('+') || this.calc.includes('-') || this.calc.includes('/') || this.calc.includes('*')){
+      this.eval = this.calc
+      this.calc = eval(this.calc)
+    }
   }
 }
